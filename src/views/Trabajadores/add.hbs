@@ -1,0 +1,43 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/trabajadores/add" method="POST">
+                        <div class="form-group">
+                            <label for="TDocumento">Tipo de Docuemnto</label>
+                            <select class="form-control" name="TDocumento">
+                                <option>CC</option>
+                                <option>CE</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="NDocumento" class="form-control" placeholder="Numero de Cedula" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="PNombre" class="form-control" placeholder="Primer Nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="SNombre" class="form-control" placeholder="Segundo Nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="PApellido" class="form-control" placeholder="Primer Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="SApellido" class="form-control" placeholder="Segundo Apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="FNacimiento">Fecha nacimiento</label>
+                            <input class="form-control" type="date" name="FNacimiento">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

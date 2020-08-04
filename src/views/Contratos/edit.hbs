@@ -1,0 +1,38 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <form action="/contratos/edit/{{contrato.Id}}" method="POST">
+                <div class="form-group">
+                    <input type="number" name="NumContrato" class="form-control" placeholder="Numero de Contrato" value="{{contrato.NumContrato}}" autofocus>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" name="IdTrabajador">
+                        {{#each Trabajador}}
+                            <option value="{{Id}}">{{Trabajador}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" name="IdEntidad">
+                        {{#each Entidad}}
+                            <option value="{{Id}}">{{Nombre}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Finicio">Fecha inicio</label>
+                    <input class="form-control" type="date" name="Finicio" value="{{contrato.Finicio}}">
+                </div>
+                <div class="form-group">
+                    <label for="FFin">Fecha termino</label>
+                    <input class="form-control" type="date" name="FFin" value="{{contrato.FFin}}">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block">
+                        Modificar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container p-4">
+    <div class="card text-center">
+        <h1 class="card-title">Lista de Contratos</h1>
+            <a class="btn btn-primary" href="/contratos/add">
+                Agregar
+            </a>
+    </div>
+    <div class="row">
+        {{#each contrato}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <a href="{{Id}}" target="_blank">
+                        <h3 class="card-title text-uppercase">
+                            Contrato: {{NumContrato}}
+                        </h3>
+                    </a>
+                    <p class="m-2">Trabajador:</p>
+                    <p class="m-2">{{Nombre}}</p>
+                    <p class="m-2">Entidad:</p>
+                    <p class="m-2">{{Entidad}}</p>
+                    <p class="m-2">Inicio: {{Fini}}</p>
+                    <p class="m-2">Fin: {{Ffin}}</p>
+                    <a class="btn btn-danger" href="/contratos/delete/{{Id}}">
+                        Borrar
+                    </a>
+                    <a class="btn btn-secondary" href="/contratos/edit/{{Id}}">
+                        Modificar
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>Por ahora no tienes contratos.</p>
+                <a href="/contratos/add">Crea uno!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
